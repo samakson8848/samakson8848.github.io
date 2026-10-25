@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPhone 13 Pro — Apple</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #000000;
+      color: #f5f5f7;
+      overflow-x: hidden;
+    }
+    .apple-blur {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .text-gradient {
+      background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-blue-gradient {
+      background: linear-gradient(135deg, #a7c7e7 0%, #4682b4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-black text-[#f5f5f7] antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Навигация -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#000000]/80 apple-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between text-xs font-normal text-[#a1a1a6]">
+      <div class="flex items-center space-x-6">
+        <a href="#" class="text-white hover:text-white transition-colors">
+          <svg class="h-4 w-4 fill-current" viewBox="0 0 170 170"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.59-7.71-11.66-14.01-6.1-9.46-10.87-20.2-14.32-32.22-3.45-12.02-5.18-23.49-5.18-34.42 0-16.14 4.12-29.6 12.36-40.38 8.24-10.78 18.59-16.29 31.06-16.53 4.59 0 9.87 1.25 15.84 3.76 5.97 2.51 10.02 3.82 12.16 3.94 1.74-.12 6.01-1.55 12.82-4.29 6.81-2.74 12.28-3.9 16.41-3.48 15.42 1.44 26.93 7.37 34.53 17.79-13.69 8.3-20.4 19.8-20.14 34.5.26 11.53 4.58 21.05 12.95 28.56 8.37 7.51 18.17 11.77 29.4 12.77-2.61 7.7-6.02 15.75-10.23 24.16zM119.22 31.84c0-7.72 2.76-15.02 8.28-21.9 5.53-6.88 12.38-11.23 20.57-13.06.33 1.1.5 2.21.5 3.33 0 7.74-2.88 15.22-8.64 22.44-5.76 7.22-12.81 11.45-21.15 12.7-.1-.99-.15-2.06-.15-3.21z"/></svg>
+        </a>
+        <span class="text-white font-semibold tracking-tight text-sm">iPhone 13 Pro</span>
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="#overview" class="hover:text-white transition-colors hidden sm:inline">Обзор</a>
+        <a href="#camera" class="hover:text-white transition-colors hidden sm:inline">Камера</a>
+        <a href="#specs" class="hover:text-white transition-colors hidden sm:inline">Характеристики</a>
+        <button onclick="alert('Спасибо за интерес! Модель доступна у авторизованных реселлеров.')" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium transition-all">Купить</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный экран -->
+  <section id="overview" class="pt-32 pb-20 px-6 text-center max-w-4xl mx-auto flex flex-col items-center">
+    <h2 class="text-xs uppercase tracking-widest text-[#a1a1a6] font-semibold mb-3">iPhone 13 Pro</h2>
+    <h1 class="text-5xl sm:text-7xl font-bold tracking-tight text-gradient mb-4">О-о-очень. Про.</h1>
+    <p class="text-lg sm:text-2xl text-[#86868b] max-w-2xl font-normal leading-relaxed mb-8">
+      Колоссальный апгрейд камер. Дисплей с частотой обновления до 120 Гц. Самый быстрый чип A15 Bionic. И потрясающая прочность.
+    </p>
+    <div class="flex items-center gap-4 text-sm mb-12">
+      <a href="#specs" class="text-blue-500 hover:underline flex items-center gap-1">Подробнее о характеристиках <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+    </div>
+
+    <!-- 3D Контейнер -->
+    <div class="w-full relative rounded-3xl bg-[#121214] border border-white/10 p-4 sm:p-8 flex flex-col items-center">
+      <div class="text-xs text-[#86868b] mb-2 flex items-center gap-2">
+        <i data-lucide="move-3d" class="w-4 h-4 text-blue-400"></i> Зажмите левую кнопку мыши и вращайте модель
+      </div>
+      <div id="canvas-container" class="w-full h-80 sm:h-96 cursor-grab active:cursor-grabbing flex items-center justify-center"></div>
+
+      <!-- Селектор цвета -->
+      <div class="mt-6 flex flex-col items-center">
+        <p id="color-name" class="text-sm font-medium text-[#f5f5f7] mb-3">Небесно-голубой (Sierra Blue)</p>
+        <div class="flex items-center gap-3">
+          <button onclick="changeColor('sierra')" class="w-8 h-8 rounded-full border-2 border-white shadow-lg bg-[#9bb5ce] transition-transform active:scale-95" title="Sierra Blue"></button>
+          <button onclick="changeColor('graphite')" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-white/50 shadow-lg bg-[#54524f] transition-transform active:scale-95" title="Graphite"></button>
+          <button onclick="changeColor('gold')" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-white/50 shadow-lg bg-[#fae7cf] transition-transform active:scale-95" title="Gold"></button>
+          <button onclick="changeColor('silver')" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-white/50 shadow-lg bg-[#f1f2ed] transition-transform active:scale-95" title="Silver"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок ProMotion -->
+  <section class="py-24 px-6 border-t border-white/10 bg-[#070708]">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-blue-500 font-semibold text-sm mb-2">Дисплей Super Retina XDR</p>
+      <h2 class="text-4xl sm:text-6xl font-bold tracking-tight text-gradient mb-6">Привет, ProMotion 120 Гц.</h2>
+      <p class="text-[#86868b] max-w-2xl mx-auto text-lg leading-relaxed mb-10">
+        Адаптивная частота обновления автоматически меняется от 10 до 120 раз в секунду, обеспечивая невероятную плавность при прокрутке и экономя заряд аккумулятора при статичном чтении.
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#161617] border border-white/5 text-left">
+          <h3 class="text-3xl font-bold text-white mb-2">до 1200 нит</h3>
+          <p class="text-sm text-[#86868b]">Яркость на улице при солнечном свете на 25% выше</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#161617] border border-white/5 text-left">
+          <h3 class="text-3xl font-bold text-blue-400 mb-2">OLED</h3>
+          <p class="text-sm text-[#86868b]">Индивидуальное свечение каждого пикселя с бесконечной контрастностью</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#161617] border border-white/5 text-left">
+          <h3 class="text-3xl font-bold text-white mb-2">6.1″ и 6.7″</h3>
+          <p class="text-sm text-[#86868b]">Два классических Pro-размера: iPhone 13 Pro и Pro Max</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок Камер -->
+  <section id="camera" class="py-24 px-6 border-t border-white/10">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-blue-500 font-semibold text-sm mb-2">Система камер Pro</p>
+        <h2 class="text-4xl sm:text-6xl font-bold tracking-tight text-gradient mb-4">Макро. Киноэффект. Ночь.</h2>
+        <p class="text-[#86868b] max-w-2xl mx-auto text-base sm:text-lg">Инновационные сенсоры улавливают до 2.2 раза больше света, открывая детали даже в кромешной тьме.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-8 rounded-3xl bg-[#121214] border border-white/10 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-semibold mb-4 text-white">Новинка</span>
+            <h3 class="text-2xl font-bold text-white mb-2">Макрофотография на расстоянии 2 см</h3>
+            <p class="text-[#86868b] text-sm leading-relaxed">
+              Благодаря обновленному сверхширокоугольному объективу и продвинутому автофокусу мельчайшие капли росы, узоры листьев и фактуры оживают в грандиозном масштабе.
+            </p>
+          </div>
+          <div class="mt-8 text-4xl font-extrabold text-blue-gradient">2 см</div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-[#121214] border border-white/10 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-semibold mb-4 text-white">Режим «Киноэффект»</span>
+            <h3 class="text-2xl font-bold text-white mb-2">Фокус как в настоящем кино</h3>
+            <p class="text-[#86868b] text-sm leading-relaxed">
+              Камера автоматически переводит фокус при появлении нового персонажа в кадре или изменении направления взгляда. Вы также можете изменить глубину резкости уже после съемки.
+            </p>
+          </div>
+          <div class="mt-8 text-4xl font-extrabold text-gradient">Dolby Vision HDR</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Спецификации -->
+  <section id="specs" class="py-24 px-6 border-t border-white/10 bg-[#070708]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-center text-white mb-12">Технические данные</h2>
+      <div class="divide-y divide-white/10 text-sm">
+        <div class="py-4 flex justify-between items-center">
+          <span class="text-[#86868b]">Процессор</span>
+          <span class="font-medium text-white text-right">A15 Bionic (6-ядерный CPU, 5-ядерный GPU)</span>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+          <span class="text-[#86868b]">Материалы корпуса</span>
+          <span class="font-medium text-white text-right">Хирургическая нержавеющая сталь, Ceramic Shield</span>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+          <span class="text-[#86868b]">Память</span>
+          <span class="font-medium text-white text-right">128 ГБ, 256 ГБ, 512 ГБ, 1 ТБ</span>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+          <span class="text-[#86868b]">Защита от воды</span>
+          <span class="font-medium text-white text-right">Рейтинг IP68 (погружение до 6 м до 30 минут)</span>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+          <span class="text-[#86868b]">Вес</span>
+          <span class="font-medium text-white text-right">203 г (13 Pro) / 238 г (13 Pro Max)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="py-12 border-t border-white/10 text-center text-xs text-[#86868b] px-6">
+    <p class="max-w-2xl mx-auto mb-4">
+      Неофициальная демо-страница, выполненная в стилистике промо-сайтов Apple. Все права на товарные знаки принадлежат Apple Inc.
+    </p>
+    <p>© 2026. Сделано с помощью Tailwind CSS & Three.js.</p>
+  </footer>
+
+  <!-- Three.js 3D Сцена -->
+  <script>
+    lucide.createIcons();
+
+    const colors = {
+      sierra: { hex: 0x9bb5ce, name: 'Небесно-голубой (Sierra Blue)' },
+      graphite: { hex: 0x4a4947, name: 'Графитовый (Graphite)' },
+      gold: { hex: 0xf5e1c8, name: 'Золотой (Gold)' },
+      silver: { hex: 0xe8e8e8, name: 'Серебристый (Silver)' }
+    };
+
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+    camera.position.set(0, 0, 7);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    container.appendChild(renderer.domElement);
+
+    // Освещение
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+    scene.add(ambientLight);
+
+    const dirLight1 = new THREE.DirectionalLight(0xffffff, 2.0);
+    dirLight1.position.set(5, 8, 5);
+    scene.add(dirLight1);
+
+    const dirLight2 = new THREE.DirectionalLight(0xffffff, 1.0);
+    dirLight2.position.set(-5, -5, -3);
+    scene.add(dirLight2);
+
+    // Модель смартфона
+    const phoneGroup = new THREE.Group();
+    scene.add(phoneGroup);
+
+    // Корпус
+    const bodyGeometry = new THREE.BoxGeometry(2.3, 4.7, 0.24);
+    const bodyMaterial = new THREE.MeshStandardMaterial({
+      color: colors.sierra.hex,
+      metalness: 0.85,
+      roughness: 0.2
+    });
+    const phoneBody = new THREE.Mesh(bodyGeometry, bodyMaterial);
+    phoneGroup.add(phoneBody);
+
+    // Экран (черный глянец)
+    const screenGeo = new THREE.PlaneGeometry(2.15, 4.5);
+    const screenMat = new THREE.MeshBasicMaterial({ color: 0x050505 });
+    const screen = new THREE.Mesh(screenGeo, screenMat);
+    screen.position.z = 0.125;
+    phoneGroup.add(screen);
+
+    // Выступ блока камер на спинке
+    const bumpGeo = new THREE.BoxGeometry(1.0, 1.0, 0.08);
+    const bumpMat = new THREE.MeshStandardMaterial({
+      color: colors.sierra.hex,
+      metalness: 0.85,
+      roughness: 0.2
+    });
+    const bump = new THREE.Mesh(bumpGeo, bumpMat);
+    bump.position.set(0.55, 1.7, -0.14);
+    phoneGroup.add(bump);
+
+    // Объективы
+    const lensGeo = new THREE.CylinderGeometry(0.18, 0.18, 0.05, 32);
+    const lensMat = new THREE.MeshStandardMaterial({ color: 0x111111, metalness: 0.9, roughness: 0.1 });
+    
+    const lens1 = new THREE.Mesh(lensGeo, lensMat);
+    lens1.rotation.x = Math.PI / 2;
+    lens1.position.set(0.35, 1.9, -0.2);
+    phoneGroup.add(lens1);
+
+    const lens2 = new THREE.Mesh(lensGeo, lensMat);
+    lens2.rotation.x = Math.PI / 2;
+    lens2.position.set(0.35, 1.5, -0.2);
+    phoneGroup.add(lens2);
+
+    const lens3 = new THREE.Mesh(lensGeo, lensMat);
+    lens3.rotation.x = Math.PI / 2;
+    lens3.position.set(0.75, 1.7, -0.2);
+    phoneGroup.add(lens3);
+
+    // Интерактивное вращение мышью
+    let isDragging = false;
+    let prevMouseX = 0;
+    let prevMouseY = 0;
+
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      prevMouseX = e.clientX;
+      prevMouseY = e.clientY;
+    });
+
+    window.addEventListener('mouseup', () => { isDragging = false; });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const deltaX = e.clientX - prevMouseX;
+      const deltaY = e.clientY - prevMouseY;
+      phoneGroup.rotation.y += deltaX * 0.01;
+      phoneGroup.rotation.x += deltaY * 0.01;
+      prevMouseX = e.clientX;
+      prevMouseY = e.clientY;
+    });
+
+    // Функция переключения цвета
+    window.changeColor = function(colorKey) {
+      const selected = colors[colorKey];
+      bodyMaterial.color.setHex(selected.hex);
+      bumpMat.color.setHex(selected.hex);
+      document.getElementById('color-name').textContent = selected.name;
+    };
+
+    // Анимационный цикл
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!isDragging) {
+        phoneGroup.rotation.y += 0.005;
+      }
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Ресайз
+    window.addEventListener('resize', () => {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+  </script>
+</body>
+</html>
